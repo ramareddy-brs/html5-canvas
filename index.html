@@ -25,11 +25,14 @@
 
     <main role="main" class="container mx-auto">
       <h3 class="display-6 text-center">DRAW WITH MOUSE</h3>
-      <canvas id="draw" class="mb-5"></canvas>
+      <div class="center-button">
+        <button class="btn btn-primary mb-3" id="canvasBtn">Clear Canvas</button>
+      </div>
+      <canvas id="draw" class="mb-3"></canvas>
     </main>
 
     <footer class="footer footer-dark">
-      <div class="d-flex justify-content-between px-5">
+      <div class="d-flex justify-content-center px-5">
         <div>
           <button
             onclick="setTheme('#1A4B84')"

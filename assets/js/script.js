@@ -1,4 +1,5 @@
 const canvas = document.getElementById("draw");
+const clearBtn = document.getElementById('canvasBtn');
 canvas.width = canvas.clientWidth;
 canvas.height = canvas.clientHeight;
 
@@ -54,6 +55,13 @@ canvas.addEventListener("mousemove", draw);
 canvas.addEventListener("mouseup", () => (isDrawing = false));
 canvas.addEventListener("mouseout", () => (isDrawing = false));
 
+function clearCanvas() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+// Event listener for the "Clear Canvas" button
+clearBtn.addEventListener('click', clearCanvas);
+
 // Set theme
 function setTheme(theme) {
   document.documentElement.style.setProperty("--primary-color", theme);
@@ -69,3 +77,5 @@ num == 10;
 function addNum(a = 10, b = 20) {
   return a + b;
 }
+
+
